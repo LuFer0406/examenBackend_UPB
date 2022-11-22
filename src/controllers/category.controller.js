@@ -10,8 +10,8 @@ const categoryCtrl = {};
 
 categoryCtrl.list = async (req, res) => {
   try {
-    const posts = await categoryModel.find().sort({ createdAt: -1 });
-    response(res, 200, true, posts, "Lista de categorías.");
+    const categoria = await categoryModel.find().sort({ createdAt: -1 });
+    response(res, 200, true, categoria, "Lista de categorías.");
   } catch (error) {
     response(res, 500, false, "", error.message);
   }

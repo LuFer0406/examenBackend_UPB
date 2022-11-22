@@ -48,7 +48,7 @@ orderCtrl.listOne = async (req, res) => {
 orderCtrl.add = async (req, res) => {
   try {
     const { product, quantity } = req.body;
-    var { total } = orderCtrl;
+    var { total } = orderModel;
     const creacionFactura = await productModel.findOne({ product });
     const producto = await productModel.findById(req.body.product);
     var stockProducto = producto.stock;

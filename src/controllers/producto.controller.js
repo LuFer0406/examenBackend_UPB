@@ -123,7 +123,7 @@ productCtrl.delete = async (req, res) => {
 
       await product.deleteOne();
 
-      response(res, 200, true, "", "El producto ha sido eliminado con éxito.");
+      return response(res, 200, true, "", "El producto ha sido eliminado con éxito.");
     }
 
     response(
